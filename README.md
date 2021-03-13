@@ -38,6 +38,11 @@ The 'htmlextra' option is another package that you can install that makes for a 
 
 ```
 
+##### Reference Materials
+
+[Postman Test Examples](https://learning.postman.com/docs/writing-scripts/script-references/test-examples/)
+[Postman Sandbox API Scripting Reference](https://learning.postman.com/docs/writing-scripts/script-references/postman-sandbox-api-reference/)
+
 
 
 _Brandon Morris_ 
