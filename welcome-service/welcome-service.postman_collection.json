@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "aa905f3a-5aa5-42ac-a1c3-24fd20db2ec1",
+		"name": "welcome-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /welcome-service",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"try {",
+							"const resp = pm.response.json();",
+							"/** Template for Custom Failure Message in Expectaion",
+							"* pm.test(\"testname\", () => { ",
+							"*    //a function where you write your criteria }, ",
+							"*    pm.expect(valueUnderTest).to.equal(expectedValue,",
+							"*    \"Optional custom failure message\")} );",
+							"*/",
+							"",
+							"/** Example Implementation of Custom Failure Message",
+							"* pm.test(\"Expected to fail\", ()=>{ pm.expect(true).to",
+							"*    .equal(false, \"Custom failure message\")} );",
+							"*/",
+							"//Now here's one that should pass",
+							"pm.test(\"Expect exact match for welcome message object\", ()=> {pm.expect(resp.message).to.equal(\"Welcome!\")}, \"Welcome Message object did not match!\");",
+							"",
+							"} catch (e) {",
+							"    console.log('An error occured while running test script.')    ",
+							"    console.log(e.message);",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/welcome-service",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"welcome-service"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
