@@ -31,6 +31,13 @@ The 'htmlextra' option is another package that you can install that makes for a 
 [HTML Extra on NPM](https://www.npmjs.com/package/newman-reporter-htmlextra)
 
 
+##### Example with the welcome-service
+
+```
+ newman run qa-automation/welcome-service/welcome-service.postman_collection.json -e qa-automation/welcome-service/welcome-service-local.postman_environment.json 
+
+```
+
 
 
 _Brandon Morris_ 
