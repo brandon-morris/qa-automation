@@ -29,6 +29,9 @@
 							"pm.test(\"Expect exact match for welcome message object\", ()=> {pm.expect(resp.message).to.equal(\"Welcome!\")}, \"Welcome Message object did not match!\");",
 							"",
 							"} catch (e) {",
+							"    pm.test('Failure occurred in postman test script', ()=>{",
+							"        pm.expect(e).to.be.undefined, e.message",
+							"    });",
 							"    console.log('An error occured while running test script.')    ",
 							"    console.log(e.message);",
 							"}"
